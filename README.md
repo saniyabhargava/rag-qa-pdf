@@ -109,21 +109,21 @@ Below are representative screenshots from the deployed system demonstrating retr
 ### 1. Deadline Query – Context-Grounded Answer Generation
 The system accurately extracts and returns project milestones from the uploaded **Deadlines.pdf**, showing successful text parsing, embedding retrieval, and generative response.
 
-![Deadline Query](./assets/Screenshot-2025-11-01 132205.png)
+![Deadline Query](./assets/Screenshot-2025-11-01-132205.png)
 
 
 ### 2. Conceptual QA – Domain Understanding Across Multiple PDFs
 The second example shows a conceptual query (*“cloud storage advantages and disadvantages”*) combining knowledge from **CC-Data Storage.pdf** and **Deadlines.pdf**.  
 This illustrates multi-document retrieval and coherent summarization using the local FLAN-T5 model.
 
-![Cloud Storage QA](./assets/Screenshot-2025-11-01 132247.png)
+![Cloud Storage QA](./assets/Screenshot-2025-11-01-132247.png)
 
 
 ### 3. Qdrant Vector Store – Embedded Knowledge Base
 The **Qdrant Dashboard** confirms that embeddings were successfully created and stored under the `pdf_docs` collection (384-dimensional vectors, cosine similarity).  
 This verifies that the backend indexing pipeline and retrieval operations are functioning correctly.
 
-![Qdrant Dashboard](./assets/Screenshot-2025-11-01 132327.png)
+![Qdrant Dashboard](./assets/Screenshot-2025-11-01-132327.png)
 
 
 ### Summary of Demonstrated Capabilities
