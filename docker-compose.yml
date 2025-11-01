@@ -1,0 +1,33 @@
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "4000:4000"
+    environment:
+      - PORT=4000
+      - QDRANT_URL=http://qdrant:6333
+      - COLLECTION_NAME=pdf_docs
+      - EMBEDDING_MODEL=Xenova/all-MiniLM-L6-v2
+      - GENERATION_MODEL=Xenova/flan-t5-base
+      - CACHE_SIZE=200
+    depends_on:
+      - qdrant
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "5173:80"
+    environment:
+      - VITE_API_BASE=http://localhost:4000
+    depends_on:
+      - backend
+
+  qdrant:
+    image: qdrant/qdrant:latest
+    ports:
+      - "6333:6333"
+    volumes:
+      - qdrant_storage:/qdrant/storage
+
+volumes:
+  qdrant_storage:

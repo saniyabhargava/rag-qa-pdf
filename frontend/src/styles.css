@@ -1,0 +1,46 @@
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto;
+  background: #0b0f17;
+  color: #e6eefc;
+}
+.container { max-width: 1100px; margin: 32px auto; padding: 0 16px; }
+
+.header {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 12px;
+}
+.badge { background:#1b2540; padding:6px 10px; border-radius:999px; font-size:12px; }
+
+.card {
+  background: #121826;
+  border: 1px solid #1f2a44;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
+  margin-top: 16px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 3fr 120px 120px;
+  gap: 16px;
+  align-items: end;
+}
+
+.label { text-align: center; font-size: 12px; opacity: .9; margin-bottom: 8px; }
+.input, .file, .num {
+  width:100%; padding:12px; border-radius:10px; border:1px solid #223054;
+  background:#0e1422; color:#e6eefc;
+}
+.btn {
+  background:#2f5af3; color:#fff; border:none; padding:12px 16px;
+  border-radius:10px; font-weight:600; cursor:pointer; width:100%;
+}
+.section-title { font-weight: 700; margin: 4px 0 12px; }
+
+.answer { white-space: pre-wrap; line-height: 1.6; }
+.list { padding-left: 18px; }
+.mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
